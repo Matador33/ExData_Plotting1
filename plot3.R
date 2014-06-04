@@ -1,5 +1,5 @@
 plot3 <- function () {
-  h1 <- read.table("~/household_power_consumption.txt",header=TRUE, sep=";", quote="\"")
+  h1 <- read.table("~/household_power_consumption.txt",header=TRUE, sep=";",stringsAsFactors=FALSE, quote="\"")
   hdate <- as.Date(h1[,1], format = "%d/%m/%Y")
   hSelect <- (hdate >= "2007-02-01") & (hdate <= "2007-02-02")
   ## should now have a selection vector for 2880 observations
